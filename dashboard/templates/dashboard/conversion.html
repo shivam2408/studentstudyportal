@@ -9,13 +9,16 @@
             <legend class="border-bottom mb-4"></legend>
             {{form|crispy}}
             <button href="" class="btn btn-outline-info" type="submit">
-
             </button>
         </div>
-
+        {% if input %}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4"></legend>
             <div class="row">
+                {{m_form.measure1|as_crispy_field}}
+            </div>
+            <div class="row">
+                {{m_form.measure2|as_crispy_field}}
             </div>
 
         </fieldset>

@@ -299,10 +299,10 @@ def conversion(request):
                     'input':True,
                     'answer':answer
                 }
-
-    form = ConversionForm()
-    context = {
-        'form':form,
-        'input':False
-    }
-    return render(request,'dashboard/conversion.html',context)
+    else:
+        form = ConversionForm()
+        context = {
+            'form':form,
+            'input':False
+        }
+        return render(request,'dashboard/conversion.html',context)
