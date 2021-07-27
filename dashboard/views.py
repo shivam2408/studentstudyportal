@@ -267,8 +267,8 @@ def conversion(request):
                 if input and int(input)>=0:
                     if first =='yard' and second =='foot':
                         answer = f'{input} yard = {int(input)*3} foot'
-                    if first =='yard' and second == 'yard':
-                        answer = f'{input} foot = {int(input)*3} yard'
+                    if first =='foot' and second == 'yard':
+                        answer = f'{input} foot = {int(input)/3} yard'
                 context ={
                     'form':form,
                     'm_form': measurment_form,
@@ -305,4 +305,4 @@ def conversion(request):
             'form':form,
             'input':False
         }
-        return render(request,'dashboard/conversion.html',context)
+    return render(request,'dashboard/conversion.html',context)
