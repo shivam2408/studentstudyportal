@@ -1,8 +1,9 @@
-{% extends 'dashboard/base.html' %} {% load static %}
+{% extends 'dashboard/base.html' %}
+{% load static %}
 {% load crispy_forms_tags%}
 {% block content %}
 <section class="text-center">
-
+    {% if not todos_done %}
     <div class="container">
         <h2>Due ToDos</h2>
         <table class="table table-striped table-bordered table-hover table-dark">
@@ -33,6 +34,7 @@
                 </tr>
             </tbody>
         </table>
+    {% else %}
         <h3>All To dos are completed!!!!</h3>
 
         <a href="#" class="btn btn-danger">To Do</a>
